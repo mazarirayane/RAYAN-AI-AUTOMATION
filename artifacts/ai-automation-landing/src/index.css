@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Space+Mono:wght@400;700&display=swap');
 
 @import 'tailwindcss';
 
@@ -13,6 +13,7 @@
   --night: #18121a;
   --night-soft: #2c202a;
   --font-sans: 'DM Sans', sans-serif;
+  --font-arabic: 'Noto Naskh Arabic', serif;
   --font-serif: 'Playfair Display', Georgia, serif;
   --font-mono: 'Space Mono', monospace;
 }
@@ -26,10 +27,10 @@ button { font: inherit; }
 img { max-width: 100%; }
 :focus-visible { outline: 3px solid var(--pink); outline-offset: 4px; }
 
-.automation-page { min-height: 100dvh; overflow-x: clip; background: var(--paper); }
+.automation-page { min-height: 100dvh; overflow-x: clip; background: var(--paper); font-family: var(--font-arabic), var(--font-sans); }
 .automation-page *, .automation-page *::before, .automation-page *::after { box-sizing: border-box; }
 .automation-page h1, .automation-page h2, .automation-page h3, .automation-page p { margin: 0; }
-.automation-page h1, .automation-page h2, .automation-page h3, .serif { font-family: var(--font-serif); }
+.automation-page h1, .automation-page h2, .automation-page h3, .serif { font-family: var(--font-arabic), var(--font-serif); }
 .container { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
 
 .topbar {
@@ -60,9 +61,9 @@ img { max-width: 100%; }
 .hero-sub { max-width: 555px; margin-top: 28px; color: var(--ink-soft); font-size: 16px; line-height: 1.95; }
 .hero-tagline { max-width: 540px; margin-top: 24px; padding-right: 18px; border-right: 2px solid var(--pink); direction: ltr; font-family: 'Libre Baskerville', serif; font-size: 15px; font-style: italic; line-height: 1.7; }
 .hero-actions { display: flex; align-items: center; gap: 18px; margin-top: 35px; }
-.primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 56px; padding: 0 22px; border: 1px solid var(--pink); border-radius: 3px; background: var(--pink); color: #fff; font-size: 14px; font-weight: 700; box-shadow: 8px 8px 0 rgba(17,16,22,.9); transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.primary-button { display: inline-flex; align-items: center; justify-content: center; gap: 11px; min-height: 56px; padding: 0 22px; border: 1px solid var(--pink); border-radius: 3px; background: var(--pink); color: #fff; font-family: var(--font-arabic), var(--font-sans); font-size: 15px; font-weight: 600; box-shadow: 8px 8px 0 rgba(17,16,22,.9); transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
 .primary-button:hover { background: var(--pink-deep); transform: translate(3px, 3px); box-shadow: 4px 4px 0 rgba(17,16,22,.9); }
-.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-soft); font-size: 13px; font-weight: 700; transition: color .25s ease; }
+.text-link { display: inline-flex; align-items: center; gap: 8px; color: var(--ink-soft); font-family: var(--font-arabic), var(--font-sans); font-size: 14px; font-weight: 600; transition: color .25s ease; }
 .text-link:hover { color: var(--pink); }
 .hero-proof { display: flex; align-items: center; gap: 10px; margin-top: 36px; color: #776d77; font-size: 11px; }
 .proof-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pink); box-shadow: 0 0 0 4px rgba(223,40,109,.15); }
