@@ -1,0 +1,1 @@
+- [Mobile conversion hierarchy](mobile-conversion-hierarchy.md) — on narrow sales pages, show the headline and primary CTA before a large product visual.

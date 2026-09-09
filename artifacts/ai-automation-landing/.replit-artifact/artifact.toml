@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "AI Automation & n8n Landing Page"
+description = "A responsive Arabic-English static landing page for the AI Automation and n8n digital product, with WhatsApp conversion CTAs, social sharing metadata, and Netlify-ready static hosting configuration."
+version = "1.0.0"
+id = "artifacts/ai-automation-landing"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25817
+
+[services.development]
+run = "pnpm --filter @workspace/ai-automation-landing run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/ai-automation-landing", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/ai-automation-landing/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25817"
+BASE_PATH = "/"
