@@ -1,6 +1,6 @@
 # AI Automation & n8n landing page
 
-Static React/Vite landing page for Rayan Mazari's AI Automation learning path.
+Static React/Vite landing page for an AI Automation learning path.
 
 ## Netlify Drop
 

@@ -12,7 +12,6 @@ import {
   Database,
   FileCheck2,
   Gauge,
-  Instagram,
   Layers3,
   MessageCircle,
   Network,
@@ -29,8 +28,6 @@ import "./index.css";
 
 const whatsappUrl =
   "https://wa.me/213560843444?text=مرحبا%20أريد%20طلب%20منتج%20AI%20Automation";
-const instagramUrl =
-  "https://www.instagram.com/rm5_maz?stkn=emN2aXZudWQxb2pi";
 
 const learningTopics = [
   ["ما هو AI Automation؟", "الفرق بين Automation وAI Automation وAI Agent", Network],
@@ -170,7 +167,6 @@ function App() {
           </a>
           <nav className="top-nav" aria-label="التنقل الرئيسي">
             <a href="#learning" data-testid="link-learning">المحتوى</a>
-            <a href="#creator" data-testid="link-creator">عن المدرب</a>
             <a href="#pricing" data-testid="link-pricing">الاستثمار</a>
             <a
               className="mini-cta"
@@ -234,38 +230,6 @@ function App() {
             </Reveal>
           </div>
           <div className="scroll-cue"><ChevronDown size={14} /> SCROLL TO BUILD</div>
-        </section>
-
-        <section className="section creator" id="creator" aria-labelledby="creator-title">
-          <div className="container creator-grid">
-            <Reveal className="portrait-frame" delay={80}>
-              <img
-                src="/images/rayan-mazari.jpg"
-                width="765"
-                height="1024"
-                loading="lazy"
-                decoding="async"
-                alt="Rayan Mazari، مدرب AI Automation"
-              />
-            </Reveal>
-            <Reveal className="creator-copy" delay={180}>
-              <SectionKicker index="01 / CREATOR" light>الشخص الذي يختصر عليك الطريق</SectionKicker>
-              <h2 id="creator-title">
-                المعرفة لا تغيّر دخلك.
-                <br />
-                <em>النظام الذي تبنيه</em> هو ما يفعل.
-              </h2>
-              <p>
-                أنا Rayan Mazari. صمّمت هذا المسار لمن يريد أن يتعامل مع الذكاء
-                الاصطناعي كأداة عمل حقيقية، لا كموضوع آخر يمرّ عليه في الأخبار.
-                ستتعلم المنطق خلف كل خطوة، حتى تبني حلولاً يفهمها العميل ويحتاجها.
-              </p>
-              <div className="creator-signature">𝖱𝖠𝖸𝖠𝖭 𝖬𝖠𝖹𝖠𝖱𝖨</div>
-              <a className="instagram-link" href={instagramUrl} target="_blank" rel="noreferrer" data-testid="link-instagram-creator">
-                <Instagram size={15} /> تابع الرحلة على Instagram
-              </a>
-            </Reveal>
-          </div>
         </section>
 
         <section className="section learning" id="learning" aria-labelledby="learning-title">
@@ -389,9 +353,7 @@ function App() {
             </a>
             <div className="footer-links">
               <a className="footer-link" href={whatsappUrl} target="_blank" rel="noreferrer" data-testid="link-whatsapp-footer"><MessageCircle size={14} /> +213560843444</a>
-              <a className="footer-link" href={instagramUrl} target="_blank" rel="noreferrer" data-testid="link-instagram-footer"><Instagram size={14} /> Instagram / Rayan Mazari</a>
             </div>
-            <span className="copyright">© 2025 Rayan Mazari</span>
           </div>
         </footer>
       </main>

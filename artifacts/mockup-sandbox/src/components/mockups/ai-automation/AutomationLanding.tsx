@@ -12,7 +12,6 @@ import {
   Database,
   FileCheck2,
   Gauge,
-  Instagram,
   Layers3,
   MessageCircle,
   Network,
@@ -28,7 +27,6 @@ import {
 
 const whatsappUrl =
   "https://wa.me/213560843444?text=%D8%A3%D8%B1%D9%8A%D8%AF%20%D8%B7%D9%84%D8%A8%20%D8%AF%D9%88%D8%B1%D8%A9%20AI%20Automation";
-const instagramUrl = "https://www.instagram.com/rayan.mazari/";
 
 const learningTopics = [
   ["ما هو AI Automation؟", "الفرق بين Automation وAI Automation وAI Agent", Network],
@@ -221,19 +219,6 @@ export function AutomationLanding() {
         .section h2 { max-width: 720px; font-size: clamp(39px, 5vw, 67px); font-weight: 600; letter-spacing: -.065em; line-height: .98; }
         .section h2 em { color: var(--pink); font-style: italic; }
         .intro-copy { max-width: 300px; color: var(--ink-soft); font-size: 14px; line-height: 1.9; }
-        .creator { background: var(--night); color: #fbf4f1; }
-        .creator-grid { display: grid; grid-template-columns: .8fr 1.2fr; align-items: center; gap: 10%; direction: ltr; }
-        .portrait-frame { position: relative; width: min(350px, 80vw); margin: auto; direction: rtl; }
-        .portrait-frame::before { content: ""; position: absolute; inset: -13px 13px 13px -13px; border: 1px solid var(--pink); }
-        .portrait-frame::after { content: "IN PRACTICE"; position: absolute; bottom: 19px; left: -35px; padding: 8px 10px; background: var(--pink); color: #fff; font-family: 'Space Mono', monospace; font-size: 9px; letter-spacing: .08em; transform: rotate(-90deg); }
-        .portrait-frame img { position: relative; display: block; width: 100%; aspect-ratio: .8; object-fit: cover; object-position: center; filter: saturate(.85) contrast(1.08); }
-        .creator-copy { direction: rtl; }
-        .creator-copy h2 { max-width: 600px; color: #fbf4f1; }
-        .creator-copy h2 em { color: #ef76a5; }
-        .creator-copy p { max-width: 570px; margin-top: 27px; color: #c9b7c1; font-size: 15px; line-height: 2; }
-        .creator-signature { margin-top: 33px; color: #fff; font-family: 'Libre Baskerville', serif; font-size: 20px; }
-        .instagram-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 24px; padding: 11px 14px; border: 1px solid #60505b; color: #f7d0dd; font-family: 'Space Mono', monospace; font-size: 11px; transition: border-color .25s ease, color .25s ease, transform .25s ease; }
-        .instagram-link:hover { border-color: #f29bbd; color: #fff; transform: translateX(-4px); }
         .learning { background: #fbf2f4; }
         .topic-list { position: relative; display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 24px; }
         .topic-list::before { content: ""; position: absolute; top: 0; right: 23px; bottom: 0; width: 1px; background: var(--rose-line); }
@@ -293,12 +278,11 @@ export function AutomationLanding() {
         .footer-link:hover { color: #f29bbd; }
         .copyright { color: #675762; font-family: 'Space Mono', monospace; font-size: 9px; }
         @media (max-width: 900px) {
-          .hero-grid, .creator-grid, .pricing-grid, .audience-grid { grid-template-columns: 1fr; gap: 52px; }
+          .hero-grid, .pricing-grid, .audience-grid { grid-template-columns: 1fr; gap: 52px; }
           .hero { min-height: auto; padding-top: 125px; }
           .hero-copy { order: 1; }
           .book-stage { order: 0; min-height: 440px; }
-          .creator-grid, .pricing-grid { gap: 72px; }
-          .portrait-frame { width: min(320px, 70vw); }
+          .pricing-grid { gap: 72px; }
           .section-intro { align-items: start; flex-direction: column; gap: 25px; }
           .intro-copy { max-width: 520px; }
           .audience-grid { gap: 50px; }
@@ -347,7 +331,6 @@ export function AutomationLanding() {
         </a>
         <nav className="top-nav" aria-label="التنقل الرئيسي">
           <a href="#learning">المحتوى</a>
-          <a href="#creator">عن المدرب</a>
           <a href="#pricing">الاستثمار</a>
           <a className="mini-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
             ابدأ الآن <ArrowLeft size={13} />
@@ -402,31 +385,6 @@ export function AutomationLanding() {
           </Reveal>
         </div>
         <div className="scroll-cue"><ChevronDown size={14} /> SCROLL TO BUILD</div>
-      </section>
-
-      <section className="section creator" id="creator" aria-labelledby="creator-title">
-        <div className="container creator-grid">
-          <Reveal className="portrait-frame" delay={80}>
-            <img src="/__mockup/images/rayan-mazari.jpg" alt="Rayan Mazari، مدرب AI Automation" />
-          </Reveal>
-          <Reveal className="creator-copy" delay={180}>
-            <SectionKicker index="01 / CREATOR" light>الشخص الذي يختصر عليك الطريق</SectionKicker>
-            <h2 id="creator-title">
-              المعرفة لا تغيّر دخلك.
-              <br />
-              <em>النظام الذي تبنيه</em> هو ما يفعل.
-            </h2>
-            <p>
-              أنا Rayan Mazari. صمّمت هذا المسار لمن يريد أن يتعامل مع الذكاء
-              الاصطناعي كأداة عمل حقيقية، لا كموضوع آخر يمرّ عليه في الأخبار.
-              ستتعلم المنطق خلف كل خطوة، حتى تبني حلولاً يفهمها العميل ويحتاجها.
-            </p>
-            <div className="creator-signature">𝖱𝖠𝖸𝖠𝖭 𝖬𝖠𝖹𝖠𝖱𝖨</div>
-            <a className="instagram-link" href={instagramUrl} target="_blank" rel="noreferrer">
-              <Instagram size={15} /> تابع الرحلة على Instagram
-            </a>
-          </Reveal>
-        </div>
       </section>
 
       <section className="section learning" id="learning" aria-labelledby="learning-title">
@@ -554,9 +512,7 @@ export function AutomationLanding() {
           </a>
           <div className="footer-links">
             <a className="footer-link" href={whatsappUrl} target="_blank" rel="noreferrer"><MessageCircle size={14} /> +213560843444</a>
-            <a className="footer-link" href={instagramUrl} target="_blank" rel="noreferrer"><Instagram size={14} /> Instagram / Rayan Mazari</a>
           </div>
-          <span className="copyright">© 2025 Rayan Mazari</span>
         </div>
       </footer>
     </main>

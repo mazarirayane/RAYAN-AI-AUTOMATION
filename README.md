@@ -1,6 +1,6 @@
 # AI Automation & n8n Landing Page
 
-Static responsive landing page for Rayan Mazari's AI Automation learning product.
+Static responsive landing page for an AI Automation learning product.
 
 ## Netlify Drop
 
